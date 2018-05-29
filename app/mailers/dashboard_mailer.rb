@@ -1,4 +1,4 @@
-class DashboardMailer < ActionMailer
+class DashboardMailer < ActionMailer::Base
 	#default from: "huarci@gmail.com"
 
   def email_something_html(somefrom, somesubject, somebody)
