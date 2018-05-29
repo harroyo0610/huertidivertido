@@ -4,9 +4,7 @@ class DashboardController < ActionController::Base
   end
 
   def create
-		p "*" * 500
-		p params
-		p "*" * 500
+		DashboardMailer.email_something_html("#{params[:email]}", "#{params[:nombre]}", "<p>#{params[:mensaje]}</p>").deliver_now
 	end
 
 end
