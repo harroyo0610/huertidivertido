@@ -163,7 +163,7 @@
       	<h1 class="text-center">Contáctanos</h1>
       	<div class="container">
 
-            <%= form_tag(controller: "dashboard", action: "create", method: "get") do %>
+            <%= form_tag(controller: "dashboard", action: "create", method: "post") do %>
             	<div class="form-group">
             		<%= label_tag 'Email' %><br>
 			  		<%= text_field_tag :email, nil, type: "email", placeholder: "name@example.com", class: "form-control"  %>
