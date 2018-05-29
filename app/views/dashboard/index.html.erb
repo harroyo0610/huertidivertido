@@ -163,7 +163,7 @@
       	<h1 class="text-center">Contáctanos</h1>
       	<div class="container">
 
-            <%= form_for :person, url: dashboard_index_path do |f| %>
+            <%= form_for :person, :url => { :action => "create" } do |f| %>
             	<div class="form-group">
             		<%= f.label 'Email' %><br>
 			  		<%= f.text_field :email, type: "email", placeholder: "name@example.com", class: "form-control"  %>
