@@ -8,7 +8,7 @@ class DashboardController < ActionController::Base
   	p "Paso1 "* 100 
   	p params[:person]
 
-		DashboardMailer.email_something_html("#{params[:person][:email]}",  "#{params[:person][:nombre]}", "#{params[:person][:mensaje]}").deliver
+		DashboardMailer.email_something_html("#{params[:person][:email]}",  "#{params[:person][:nombre]}", "#{params[:person][:mensaje]}").deliver_now
 		p "Paso "* 100 
 		redirect_to root_path
 	end
