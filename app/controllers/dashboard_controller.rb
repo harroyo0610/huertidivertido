@@ -6,7 +6,7 @@ class DashboardController < ActionController::Base
   def create
 		DashboardMailer.email_something_html("#{params[:email]}", "#{params[:nombre]}", "<p>#{params[:mensaje]}</p>").deliver_now
 		p "Paso "* 100 
-		redirect_to dashboard_index_path
+		redirect_to root_path
 	end
 
 end
