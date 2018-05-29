@@ -1,8 +1,8 @@
 class DashboardMailer < ActionMailer::Base
-	default to: "huarci@gmail.com"
+	default from: "huarci@gmail.com"
 
   def email_something_html(somefrom, somesubject, somebody)
-    mail(from: somefrom,
+    mail(to: somefrom,
          subject: somesubject,
          body: somebody,
          content_type: "text/html")
